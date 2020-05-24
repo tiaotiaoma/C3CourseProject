@@ -1,0 +1,30 @@
+The run_analyis.R file is the R code for the course project of getting and cleaning data.
+The data was firsted downloaded and unzipped into the folder "c3data" in the working directory. Then the package "dplyr" was used to read 
+8 data files into R with added column names. The 8 data files are:
+  1) features - contains 561 variables for the data set (dim = 561 x 2).
+  2) actvities - include code for the 6 different activities (dim = 6 x 2).
+  3) subject_train - the identifier of subject for training data (dim = 7352 x 1)
+  4) y_train - the code of activity that subjects performed for the training data (dim = 7352 x 1)
+  5) x_train - the measurment on the 561 variables on the subject for the training data (dim = 7352 x 561)
+  6) subject_test - the identifier of subject for test data (dim = 2947 x 1)
+  7) y_test - the code of activity that subjects performed for the test data (dim = 2947 x 1)
+  8) x_test - the measurment on the 561 variables for the subjects for the test data (dim = 2947 x 561)
+#1 the traing and the test data set was merged to create one data set 
+  train - a data set for traing with subject, activity code, and all measurment variables  
+  test - a data set for test with subject, activity code, and all measurment variables  
+  merged - a tidy data set was created by merging training and test data set
+  
+ #2 Extracts only the measurements on the mean and standard deviation for each measurement.
+   mean_stdv - a data set containg subject, code and mean and standard deviation for each meansruemnt only
+  
+ #3. Uses descriptive activity names to name the activities in the data set
+    The data set "merged" has descriptive activity instead of code
+    
+ # 4. Appropriately labels the data set with descriptive variable names.
+     The data set "merged" gpt more descriptive on the variable names
+     
+ # 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+    subAct was data set grouped by subject and activity on the data set "merged" from step 4
+    tidydata 2 was data set that avearged the measurment of all variables based on subject and activity 
+    
+    tidydata 2 was written as "tidydata2. txt"
